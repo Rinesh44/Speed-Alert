@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.smarann.dashboardproto.Activity.DashActivity" />
+
+
+    <LinearLayout
+        android:id="@+id/lltime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:weightSum="1">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonhour"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_marginLeft="@dimen/_6sdp"
+            android:layout_marginRight="@dimen/_6sdp"
+            android:text="Hour"
+            android:theme="@style/setRegister" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttontoday"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_marginLeft="@dimen/_6sdp"
+            android:layout_marginRight="@dimen/_6sdp"
+            android:text="Today"
+            android:theme="@style/setRegister" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonweek"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_marginLeft="@dimen/_6sdp"
+            android:layout_marginRight="@dimen/_6sdp"
+            android:text="Week"
+            android:theme="@style/setRegister" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonmonth"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_marginLeft="@dimen/_6sdp"
+            android:layout_marginRight="@dimen/_6sdp"
+            android:text="Month"
+            android:theme="@style/setRegister" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonolder"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_marginLeft="@dimen/_6sdp"
+            android:layout_marginRight="@dimen/_6sdp"
+            android:text="Older"
+            android:theme="@style/setRegister" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/AntiqueWhite"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textviewall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/Black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/buttonall"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_48sdp"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:layout_marginRight="@dimen/_6sdp"
+                android:text="All"
+                android:theme="@style/setRegister" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/Algae_Green"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textviewbusy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/White"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/buttonbusy"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_48sdp"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:layout_marginRight="@dimen/_6sdp"
+                android:text="Busy"
+                android:theme="@style/setRegister" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorSecondary"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textviewfree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/White"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/buttonactive"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_48sdp"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:layout_marginRight="@dimen/_6sdp"
+                android:text="Free"
+                android:theme="@style/setRegister" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/Black"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textviewoffline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/White"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/buttonoffline"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_48sdp"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:layout_marginRight="@dimen/_6sdp"
+                android:text="Offline"
+                android:theme="@style/setRegister" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/framelayout_dashactivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+
+    <ImageView
+        android:id="@+id/image_view_drawer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_menu_black_48dp"
+        android:tint="@color/colorPrimaryDark" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_mylocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/framelayout_dashactivity"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_6sdp"
+        android:src="@drawable/ic_my_location_black_18dp"
+        android:tint="@color/White"
+        android:visibility="invisible"
+        app:backgroundTint="#2bc25d" />
+
+</RelativeLayout>

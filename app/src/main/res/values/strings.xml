@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Tootle Speed Alert</string>
+    <string name="mocked_drivers">Mocked Drivers</string>
+    <string name="driver_status">Driver Status</string>
+    <string name="active_partners">Active Partners</string>
+    <string name="dashboard_home">Dashboard Home</string>
+    <string name="google_key" templateMergeStrategy="preserve" translatable="false">
+AIzaSyBZWBe_lQQmvab_jbC0-qIjFWGi7zTN0xg
+    </string>
+    <string name="open_navigation_drawer">Open navigation drawer</string>
+    <string name="active_checklist">Active Checklist</string>
+    <string name="checklist_history">Checklist History</string>
+</resources>

@@ -1,0 +1,94 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.example.darknight.tootlespeedalert"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    signingConfigs {
+        release {
+            //storeFile file('/Users/mac/Documents/tootle.jks')
+            //     storeFile file('/home/bipin/AndroidStudioProjects/three60/cabioclient/tootle.jks')
+            storePassword "tootle"
+            keyAlias "tootle"
+            keyPassword "tootle"
+            storeFile file('/home/darknight/AndroidStudioProjects/TootleSpeedAlert/tootlespeedalert.jks')
+        }
+    }
+
+    buildTypes {
+        release {
+            buildConfigField "boolean", "PLAYSTORE_MODE", 'true'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true
+            signingConfig signingConfigs.release
+        }
+        debug {
+            buildConfigField "boolean", "PLAYSTORE_MODE", 'false'
+            debuggable true
+        }
+    }
+}
+
+project.ext {
+    daggerVersion = "2.13"
+}
+
+dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.google.firebase:firebase-messaging:12.0.0'
+    compile 'com.google.android.gms:play-services-maps:12.0.0'
+    compile 'com.google.android.gms:play-services-location:12.0.0'
+    implementation 'com.github.bumptech.glide:glide:3.8.0'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile 'com.firebaseui:firebase-ui-database:0.4.0'
+    compile 'com.google.android.gms:play-services-places:12.0.0'
+    compile 'com.google.maps.android:android-maps-utils:0.4+'
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'com.google.android.gms:play-services-gcm:12.0.0'
+    compile 'com.android.support:cardview-v7:26.1.0'
+    compile 'com.google.firebase:firebase-database:12.0.0'
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.google.firebase:firebase-crash:12.0.0'
+    compile 'com.intuit.sdp:sdp-android:1.0.3'
+    compile 'com.google.firebase:firebase-auth:12.0.0'
+    compile 'com.journeyapps:zxing-android-embedded:3.3.0'
+    compile 'io.reactivex.rxjava2:rxjava:2.0.1'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'com.getbase:floatingactionbutton:1.10.1'
+    compile 'fr.avianey.com.viewpagerindicator:library:2.4.1@aar'
+
+    // Dagger core
+    annotationProcessor "com.google.dagger:dagger-compiler:$project.daggerVersion"
+    compile "com.google.dagger:dagger:$project.daggerVersion"
+
+    // Dagger Android
+    annotationProcessor "com.google.dagger:dagger-android-processor:$project.daggerVersion"
+    compile "com.google.dagger:dagger-android-support:$project.daggerVersion"
+    compile "com.google.dagger:dagger-android:$project.daggerVersion"
+    testCompile 'junit:junit:4.12'
+}
+apply plugin: 'com.google.gms.google-services'
+

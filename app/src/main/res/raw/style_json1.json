@@ -1,0 +1,10 @@
+[
+  {
+    "featureType": "road.highway",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  }
+]
